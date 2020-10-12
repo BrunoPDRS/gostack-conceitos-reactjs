@@ -18,7 +18,7 @@ function App() {
       url: "someurl",
       techs: [],
     }).then( response => setRepos([...repos, response.data]));
-  }
+  };
 
   async function handleRemoveRepository(id) {
     await api.delete(`/repositories/${id}`).then(response => {
@@ -29,7 +29,7 @@ function App() {
 
       return setRepos(currentRepos);
     });
-  }
+  };
 
   return (
     <div>
